@@ -10,21 +10,22 @@
             background-color: #f0f0f0;
             margin: 0;
             padding: 0;
+            transition: background-color 0.5s;
         }
         
         .navbar {
             background-color: #000;
             overflow: hidden;
+            display: flex;
+            justify-content: center;
         }
         
         .navbar a {
-            float: left;
-            display: block;
             color: #f2f2f2;
             text-align: center;
-            padding: 14px 20px;
             text-decoration: none;
             font-size: 17px;
+            padding: 10px 20px;
         }
         
         .navbar a:hover {
@@ -38,9 +39,8 @@
         }
 
         .logo {
-            width: 70px;
-            height: 50px;
-            margin-right: 5px;
+            max-width: 50px;
+            height: auto;
             vertical-align: middle;
         }
 
@@ -54,6 +54,10 @@
             margin-left: auto;
             margin-right: auto;
             text-align: left;
+        }
+
+        .project {
+            margin-bottom: 40px;
         }
 
         .project-title {
@@ -71,14 +75,24 @@
             height: auto;
             margin-bottom: 20px;
             border-radius: 10px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .project-link {
             display: block;
-            margin-bottom: 10px;
             color: #333;
             text-decoration: none;
             font-size: 18px;
+            text-align: center;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background-color: #ddd;
+            margin: 20px 0;
         }
     </style>
 </head>
@@ -87,18 +101,21 @@
         <a href="https://www.youtube.com/@sadwave_"><img src="IMG_1731.png" alt="YouTube" class="logo"> YouTube</a>
         <a href="https://discord.gg/gdrequests"><img src="IMG_1327.png" alt="Discord" class="logo"> Discord</a>
         <a href="https://www.twitch.tv/sadwaveyt"><img src="IMG_2593.png" alt="Twitch" class="logo"> Twitch</a>
+        <button onclick="toggleDarkMode()">Toggle Dark Mode</button>
     </div>
     <div class="main">
         <h1>sadwave</h1>
     </div>
+    <hr>
     <div class="projects">
-        <h2>Coding Projects</h2>
+        <h2 style="text-align: center;">Coding Projects</h2>
         <div class="project">
             <h3 class="project-title">Project 1</h3>
             <img src="project1_image.jpg" alt="Project 1" class="project-image">
             <p class="project-description">Description of Project 1 goes here.</p>
             <a href="#project1" class="project-link">View Project</a>
         </div>
+        <hr>
         <div class="project">
             <h3 class="project-title">Project 2</h3>
             <img src="project2_image.jpg" alt="Project 2" class="project-image">
@@ -107,5 +124,12 @@
         </div>
         <!-- Add more projects as needed -->
     </div>
+
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            body.classList.toggle("dark-mode");
+        }
+    </script>
 </body>
 </html>
