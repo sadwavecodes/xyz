@@ -48,6 +48,7 @@
             background-size: cover;
             background-position: center;
             padding: 100px 0;
+            animation: rainbowGlow 5s linear infinite alternate;
         }
 
         .logo {
@@ -109,7 +110,7 @@
             margin: 20px 0;
         }
 
-        @keyframes rainbow {
+        @keyframes rainbowGlow {
             0% {
                 color: #ff0000; /* Red */
                 text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 80px #ff0000; /* Red glow */
@@ -159,16 +160,7 @@
             <p class="project-description">Description of Project 1 goes here.</p>
             <a href="#project1" class="project-link">View Project</a>
         </div>
-        <hr>
-                <div class="project">
-            <h3 class="project-title">Project 2</h3>
-            <img src="project2_image.jpg" alt="Project 2" class="project-image">
-            <p class="project-description">Description of Project 2 goes here.</p>
-            <a href="#project2" class="project-link">View Project</a>
-        </div>
-        <!-- Add more projects as needed -->
     </div>
-
     <script>
         window.onscroll = function() {scrollFunction()};
 
