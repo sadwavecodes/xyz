@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -109,16 +110,17 @@
             margin: 20px 0;
         }
 
-        .main  {
+        .main h1 {
+            font-family: 'Pusab', sans-serif;
+            font-size: 70px;
             background-image: 
                 linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red); 
             -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;  
-            animation: rainbowGlow 35s linear infinite;
-            animation-direction: alternate;
+            -webkit-text-fill-color: transparent;
+            animation: rainbow-animation 35s linear infinite alternate;
         }
 
-        @keyframes rainbowGlow {
+        @keyframes rainbow-animation {
             0% {
                 filter: hue-rotate(0deg);
             }
