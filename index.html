@@ -48,9 +48,6 @@
             background-size: cover;
             background-position: center;
             padding: 100px 0;
-            color: #00ff00; /* Razer RGB Chroma font color */
-            text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 40px #00ff00, 0 0 80px #00ff00; /* Razer RGB Chroma font effect */
-            animation: rainbow 2s linear infinite alternate;
         }
 
         .logo {
@@ -115,24 +112,31 @@
         @keyframes rainbow {
             0% {
                 color: #ff0000; /* Red */
+                text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 80px #ff0000; /* Red glow */
             }
             16.66% {
                 color: #ff7f00; /* Orange */
+                text-shadow: 0 0 10px #ff7f00, 0 0 20px #ff7f00, 0 0 40px #ff7f00, 0 0 80px #ff7f00; /* Orange glow */
             }
             33.33% {
                 color: #ffff00; /* Yellow */
+                text-shadow: 0 0 10px #ffff00, 0 0 20px #ffff00, 0 0 40px #ffff00, 0 0 80px #ffff00; /* Yellow glow */
             }
             50% {
                 color: #00ff00; /* Green */
+                text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 40px #00ff00, 0 0 80px #00ff00; /* Green glow */
             }
             66.66% {
                 color: #0000ff; /* Blue */
+                text-shadow: 0 0 10px #0000ff, 0 0 20px #0000ff, 0 0 40px #0000ff, 0 0 80px #0000ff; /* Blue glow */
             }
             83.33% {
                 color: #4b0082; /* Indigo */
+                text-shadow: 0 0 10px #4b0082, 0 0 20px #4b0082, 0 0 40px #4b0082, 0 0 80px #4b0082; /* Indigo glow */
             }
             100% {
                 color: #9400d3; /* Violet */
+                text-shadow: 0 0 10px #9400d3, 0 0 20px #9400d3, 0 0 40px #9400d3, 0 0 80px #9400d3; /* Violet glow */
             }
         }
     </style>
@@ -144,7 +148,7 @@
         <a href="https://www.twitch.tv/sadwaveyt"><img src="IMG_2593.png" alt="Twitch" class="logo"> Twitch</a>
     </div>
     <div class="main">
-        <h1 style="margin-top: 50px;">sadwave</h1>
+        <h1>sadwave</h1>
     </div>
     <hr>
     <div class="projects">
@@ -156,7 +160,7 @@
             <a href="#project1" class="project-link">View Project</a>
         </div>
         <hr>
-        <div class="project">
+                <div class="project">
             <h3 class="project-title">Project 2</h3>
             <img src="project2_image.jpg" alt="Project 2" class="project-image">
             <p class="project-description">Description of Project 2 goes here.</p>
@@ -178,3 +182,4 @@
     </script>
 </body>
 </html>
+     
