@@ -109,37 +109,21 @@
             background-color: #ddd;
             margin: 20px 0;
         }
+      .main  {
+  background-image: 
+    linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet, red); 
+  -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;  
+  animation: rainbow-animation 35s linear infinite;
+}
 
-        @keyframes rainbowGlow {
-            0% {
-                color: #ff0000; /* Red */
-                text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 40px #ff0000, 0 0 80px #ff0000; /* Red glow */
-            }
-            16.66% {
-                color: #ff7f00; /* Orange */
-                text-shadow: 0 0 10px #ff7f00, 0 0 20px #ff7f00, 0 0 40px #ff7f00, 0 0 80px #ff7f00; /* Orange glow */
-            }
-            33.33% {
-                color: #ffff00; /* Yellow */
-                text-shadow: 0 0 10px #ffff00, 0 0 20px #ffff00, 0 0 40px #ffff00, 0 0 80px #ffff00; /* Yellow glow */
-            }
-            50% {
-                color: #00ff00; /* Green */
-                text-shadow: 0 0 10px #00ff00, 0 0 20px #00ff00, 0 0 40px #00ff00, 0 0 80px #00ff00; /* Green glow */
-            }
-            66.66% {
-                color: #0000ff; /* Blue */
-                text-shadow: 0 0 10px #0000ff, 0 0 20px #0000ff, 0 0 40px #0000ff, 0 0 80px #0000ff; /* Blue glow */
-            }
-            83.33% {
-                color: #4b0082; /* Indigo */
-                text-shadow: 0 0 10px #4b0082, 0 0 20px #4b0082, 0 0 40px #4b0082, 0 0 80px #4b0082; /* Indigo glow */
-            }
-            100% {
-                color: #9400d3; /* Violet */
-                text-shadow: 0 0 10px #9400d3, 0 0 20px #9400d3, 0 0 40px #9400d3, 0 0 80px #9400d3; /* Violet glow */
-            }
-        }
+@keyframes rainbowGlow {
+    to {
+        background-position: 4500vh;
+    }
+}
+       
+        
     </style>
 </head>
 <body>
