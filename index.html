@@ -108,21 +108,24 @@
             background-color: #ddd;
             margin: 20px 0;
         }
-      .main  {
-  background-image: 
-    linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet, red); 
-  -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;  
-  animation: rainbow-animation 35s linear infinite;
-}
 
-@keyframes rainbowGlow {
-    to {
-        background-position: 4500vh;
-    }
-}
-       
-        
+        .main  {
+            background-image: 
+                linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red); 
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;  
+            animation: rainbowGlow 35s linear infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes rainbowGlow {
+            0% {
+                filter: hue-rotate(0deg);
+            }
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
     </style>
 </head>
 <body>
@@ -157,4 +160,3 @@
     </script>
 </body>
 </html>
-     
