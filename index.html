@@ -16,8 +16,12 @@
             background-color: #000;
             overflow: hidden;
             display: flex;
-            justify-content: center;
+            justify-content: space-around;
             align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
         
         .navbar a {
@@ -26,9 +30,6 @@
             text-decoration: none;
             font-size: 17px;
             padding: 10px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
         }
         
         .navbar a:hover {
@@ -38,7 +39,7 @@
         
         .main {
             text-align: center;
-            margin-top: 50px;
+            margin-top: 80px; /* Adjusted margin to accommodate the fixed navbar */
         }
 
         .logo {
@@ -99,6 +100,7 @@
             margin: 20px 0;
         }
 
+        /* Added fade effect on scroll */
         @keyframes fadeEffect {
             from {
                 opacity: 1;
@@ -108,13 +110,13 @@
             }
         }
 
-        .navbar a img {
+        .navbar-scrolled {
             animation: fadeEffect 2s infinite alternate;
         }
     </style>
 </head>
 <body>
-    <div class="navbar">
+    <div class="navbar" id="navbar">
         <a href="https://www.youtube.com/@sadwave_"><img src="IMG_1731.png" alt="YouTube" class="logo"> YouTube</a>
         <a href="https://discord.gg/gdrequests"><img src="IMG_1327.png" alt="Discord" class="logo"> Discord</a>
         <a href="https://www.twitch.tv/sadwaveyt"><img src="IMG_2593.png" alt="Twitch" class="logo"> Twitch</a>
@@ -140,5 +142,17 @@
         </div>
         <!-- Add more projects as needed -->
     </div>
+
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+                document.getElementById("navbar").classList.add("navbar-scrolled");
+            } else {
+                document.getElementById("navbar").classList.remove("navbar-scrolled");
+            }
+        }
+    </script>
 </body>
 </html>
