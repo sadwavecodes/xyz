@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,10 +26,11 @@
             width: 100%;
             top: 0;
             z-index: 1000;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         .navbar a {
-            color: #f2f2f2;
+            color: #ffffff;
             text-align: center;
             text-decoration: none;
             font-size: 17px;
@@ -44,11 +44,12 @@
         
         .main {
             text-align: center;
-            margin-top: 80px; /* Adjusted margin to accommodate the fixed navbar */
-            background-image: url('IMG_0677.jpeg');
-            background-size: cover;
+            margin-top: 80px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-image: url('sadwave.jpg');
             background-position: center;
-            padding: 100px 0;
+            padding: 50px 0;
         }
 
         .logo {
@@ -103,15 +104,9 @@
             text-align: center;
         }
 
-        hr {
-            border: 0;
-            height: 1px;
-            background-color: #ddd;
-            margin: 20px 0;
-        }
 
         .main h1 {
-            font-size: 70px;
+            font-size: 50px;
             background-image: 
     linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet, red); 
   -webkit-background-clip: text;
@@ -124,6 +119,10 @@
         background-position: 4500vh;
     }       
         }
+
+
+
+
     </style>
 </head>
 <body>
@@ -131,6 +130,7 @@
         <a href="https://www.youtube.com/@sadwave_"><img src="IMG_1731.png" alt="YouTube" class="logo"> YouTube</a>
         <a href="https://discord.gg/gdrequests"><img src="IMG_1327.png" alt="Discord" class="logo"> Discord</a>
         <a href="https://www.twitch.tv/sadwaveyt"><img src="IMG_2593.png" alt="Twitch" class="logo"> Twitch</a>
+
     </div>
     <div class="main">
         <h1>sadwave</h1>
@@ -145,6 +145,9 @@
             <a href="#project1" class="project-link">View Project</a>
         </div>
     </div>
+    <a href="login.html"><button>Admin Login</button></a>
+
+
     <script>
         window.onscroll = function() {scrollFunction()};
 
@@ -155,6 +158,11 @@
                 document.getElementById("navbar").classList.remove("navbar-scrolled");
             }
         }
+
+
+
+
+
     </script>
 </body>
 </html>
