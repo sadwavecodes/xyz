@@ -3,26 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Response List</title>
+  <title>Receiver Website</title>
 </head>
 <body>
-  <h2>Responses</h2>
-  <ul id="responseList"></ul>
+  <h2>Form Submission Receiver</h2>
+  <div id="responseList"></div>
 
   <script>
-    // Function to display response in list
-    function displayResponse(response) {
+    // Function to display form submissions
+    function displaySubmission(response) {
       var responseList = document.getElementById("responseList");
-      var listItem = document.createElement("li");
+      var listItem = document.createElement("div");
       listItem.textContent = response;
       responseList.appendChild(listItem);
     }
 
-    // Check if data is submitted
-    if (window.location.search.indexOf("response=") !== -1) {
-      // Get the submitted response from URL parameter
-      var response = decodeURIComponent(window.location.search.substring(window.location.search.indexOf("response=") + 9));
-      displayResponse(response);
+    // Check if form data is received in the URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const response = urlParams.get('response');
+    if (response) {
+      displaySubmission(response);
     }
   </script>
 </body>
