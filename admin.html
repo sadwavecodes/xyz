@@ -20,6 +20,31 @@ width:100%;
 
 
 </style>
+
+
+<body>
+  <h2>Responses</h2>
+  <ul id="responseList"></ul>
+
+  <script>
+    // Function to display response in list
+    function displayResponse(response) {
+      var responseList = document.getElementById("responseList");
+      var listItem = document.createElement("li");
+      listItem.textContent = response;
+      responseList.appendChild(listItem);
+    }
+
+    // Check if data is submitted
+    if (window.location.search.indexOf("response=") !== -1) {
+      // Get the submitted response from URL parameter
+      var response = decodeURIComponent(window.location.search.substring(window.location.search.indexOf("response=") + 9));
+      displayResponse(response);
+    }
+  </script>
+</body>
+</html>
+
     <div class="signout">
 <a href="index.html">
     <button>signout</button>
