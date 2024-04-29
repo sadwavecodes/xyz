@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,12 +10,12 @@
   <ul id="submissionList"></ul>
 
   <script>
+    // Developer API Key for Pastebin
+    var apiKey = "zgYBXyRv_CEdEfKxlz_UsnJ4i7dpPXb7";
+
     fetch("https://pastebin.com/api/api_post.php", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: "api_dev_key=zgYBXyRv_CEdEfKxlz_UsnJ4i7dpPXb7&api_option=list"
+      body: "api_dev_key=" + apiKey + "&api_option=list"
     })
     .then(response => response.text())
     .then(data => {
