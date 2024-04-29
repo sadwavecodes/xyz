@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,23 +8,28 @@
 </head>
 <body>
   <h2>Form Submission Receiver</h2>
-  <div id="responseList"></div>
+  <ul id="submissionList"></ul>
 
   <script>
-    // Function to display form submissions
-    function displaySubmission(response) {
-      var responseList = document.getElementById("responseList");
-      var listItem = document.createElement("div");
-      listItem.textContent = response;
-      responseList.appendChild(listItem);
-    }
-
-    // Check if form data is received in the URL parameters
-    const urlParams = new URLSearchParams(window.location.search);
-    const response = urlParams.get('response');
-    if (response) {
-      displaySubmission(response);
-    }
+    fetch("https://pastebin.com/api/api_post.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: "api_dev_key=zgYBXyRv_CEdEfKxlz_UsnJ4i7dpPXb7&api_option=list"
+    })
+    .then(response => response.text())
+    .then(data => {
+      // Process data and display submissions
+      var submissions = data.split('\n').map(submission => submission.split(',')[0]);
+      var submissionList = document.getElementById("submissionList");
+      submissions.forEach(submission => {
+        var listItem = document.createElement("li");
+        listItem.textContent = submission;
+        submissionList.appendChild(listItem);
+      });
+    })
+    .catch(error => console.error("Error:", error));
   </script>
 </body>
 </html>
